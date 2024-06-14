@@ -38,13 +38,25 @@ Including another URLconf
 # ]
 
 
+# from django.contrib import admin
+# from django.urls import path, include
+
+# urlpatterns = [
+#     path('admin/', admin.site.urls),
+#     path('', include('login.urls')),  # Include login app URLs as root
+#     path('forum/', include('disc_forum.urls')),  # Include forum app URLs
+#     path('home/', include('home.urls')),  # Include home app URLs
+#     path('videos/', include('learning_vid.urls')),  # Include videos app URLs
+# ]
+
+
 from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('login.urls')),  # Include login app URLs as root
-    path('forum/', include('disc_forum.urls')),  # Include forum app URLs
-    path('home/', include('home.urls')),  # Include home app URLs
-    path('videos/', include('learning_vid.urls')),  # Include videos app URLs
+    path('disc_forum/', include('disc_forum.urls')),
+    path('videos/', include('learning_vid.urls')),
+    path('home/', include('home.urls')),
+    path('', include('login.urls')),
 ]
