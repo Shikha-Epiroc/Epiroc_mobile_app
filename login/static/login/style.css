@@ -1,12 +1,12 @@
 /* Reset default styles */
-* {
+/* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 /* Global styles */
-body {
+/*body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     background-color: #f2f2f2;
@@ -29,8 +29,9 @@ body {
 }
 
 .header .logo img {
-    height: 50px; /* Adjust height as needed */
+    height: 50px; 
 }
+
 
 .header .header-title h1 {
     font-size: 1.5rem;
@@ -113,7 +114,7 @@ body {
         max-width: calc(50% - 20px);
     }
 }
-
+*/
 
 
 
