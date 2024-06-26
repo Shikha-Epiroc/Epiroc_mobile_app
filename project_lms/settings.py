@@ -46,7 +46,13 @@ EXTERNAL_APPS = [
     'home',
     'disc_forum',
     'learning_vid',
-]
+    'crispy_forms',
+    'crispy_bootstrap5'
+    ]
+
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 INSTALLED_APPS +=  EXTERNAL_APPS
 

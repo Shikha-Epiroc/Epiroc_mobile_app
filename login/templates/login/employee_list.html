@@ -1,0 +1,36 @@
+<!-- login/templates/login/employee_list.html -->
+
+
+{% extends "login/base.html"%}
+
+{% block content %}
+<table class="table table-bordered">
+    <thead class="border-bottom font-weight-bold">
+         <tr>
+            <td bgcolor="green">Full Name</td>
+            <td>Mobile</td>
+            <td>Position</td>
+            <td>Edit</td>
+            <td>Delete</td>
+
+         </tr>
+    </thead>
+    <tbody>
+        {% for employee in employee_list %}
+            <tr>
+                <td>{{employee.full_name}}</td>
+                <td>{{employee.mobile}}</td>
+                <td>{{employee.position}}</td>
+
+                <td><a href="{% url 'employee_update' employee.id %}"  class="btn btn-primary"> Edit</a></td>
+                <td><a href="{% url 'employee_delete' employee.id %}"  class="btn btn-danger"> Delete</a></td>
+
+
+                </td>
+             </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<br>
+<br>
+{% endblock content %}

@@ -11,6 +11,7 @@
         <span id="ucHeaderId_lblHeader" class="LabelBoldHeaderCss">EITC TECH FORM</span>
     </div>
 
+
     <div class="container">
         <div class="image-with-text">
             <a href="{% url 'forum_redirect' %}" class="center-image">
@@ -24,7 +25,14 @@
             </a>
             <h3>Resource Library</h3>
         </div>
+        <div class="image-with-text">
+            <a href="{% url 'profiles' %}" class="center-image">
+                <img src="{% static 'home/profiles.png' %}" alt="Profiles" class="clickable-image">
+            </a>
+            <h3>Profiles</h3>
+        </div>
     </div>
+
 
     <footer>
         <a href="{% url 'home' %}">Home</a> |

@@ -1,17 +1,21 @@
-from django import forms
-from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
-from django.contrib.auth import get_user_model
+from  django import forms
+from .models import Employee
 
-User = get_user_model()
 
-class SignUpForm(UserCreationForm):
-    email = forms.EmailField()
+class EmployeeForm(forms.ModelForm):
 
     class Meta:
-        model = User
-        fields = ('username', 'email', 'password1', 'password2')
+        model = Employee
+        # fields = '__all__'
+        fields = ('full_name', 'mobile', 'emp_code', 'position')
+        labels = {'full_name': 'Full Name',
+                  'emp_code': 'emp_code'
+                  }
 
-class LoginForm(AuthenticationForm):
-    class Meta:
-        model = User
-        fields = ('username', 'password')
+    def __init__(self, *args, **kwargs):
+        super(EmployeeForm,self).__init__(*args, **kwargs)
+        self.fields['position'].empty_label = "select"
+        self.fields['emp_code'].required = False
+
+
+
