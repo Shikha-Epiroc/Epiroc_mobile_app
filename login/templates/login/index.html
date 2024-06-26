@@ -1,19 +1,46 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'login/style.css' %}">
     <title>Login Page</title>
 </head>
 <body>
-    <h1>Welcome to the Login Page!</h1>
-
-    {% if user.is_authenticated %}
-        <p>Logged in as {{ user.username }}</p>
-        <p><a href="{% url 'logout' %}">Logout</a></p>
-    {% else %}
-        <p><a href="{% url 'signup' %}">Sign Up</a></p>
-        <p><a href="{% url 'login' %}">Log In</a></p>
-    {% endif %}
-    
+    <div class="top_background">
+        <img src="{% static 'home/Logotype_yellow.png' %}" alt="Epiroc Logo">
+        <div class="LabelBoldHeaderCss">EITC TECH FORUM</div>
+    </div>
+    <div class="main-container">
+        <div class="left-side">
+            <img src="{% static 'login/bg_login.png' %}" alt="Mining Truck">
+        </div>
+        <div class="vertical-line"></div>
+        <div class="right-side">
+            <h1>Welcome!</h1>
+            <h2 class="haveAnAccount">Already have an account?</h2>
+            <p>Enter your email address and password (both are case-sensitive).</p>
+            <form method="post" action="{% url 'user_login' %}">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password">
+                </div>
+                <button type="submit" class="login-button">Log in</button>
+            </form>
+            <h2 class="haveAnAccount">Not a registered user yet?</h2>
+            <div class="bottomLink">
+                <a href="{% url 'signup' %}">
+                Create an account</a>
+            <p></p>
+          </div>
+        </div>
+    </div>
+    <footer class="footer-note">Web application developed and maintained by EITC.</footer>
 </body>
 </html>
