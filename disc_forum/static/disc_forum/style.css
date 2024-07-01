@@ -1,85 +1,3 @@
-/* blog/static/blog/style.css 
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: #f4f4f4;
-}
-
-header {
-    background-color: #425563;
-    color: white;
-    padding: 10px 0;
-}
-
-.container {
-    width: 80%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo img {
-    height: 40px;
-}
-
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.content {
-    padding: 20px;
-    background: white;
-    margin-top: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-.post, .comment {
-    background: white;
-    margin-bottom: 20px;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-footer {
-    background-color: #425563;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-}
-
-
-/* body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 20px;
-    background: #f4f4f4;
-}
-.post, .comment {
-    background: white;
-    margin-bottom: 20px;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-} */
-
-
 /* Existing CSS... */
 
 .container {
@@ -154,7 +72,7 @@ footer {
 .footer-note {
     position: fixed;
     bottom: 10px;
-    width: 100%;
+    width: 96%;
     text-align: center;
     background-color: #425563;
     color: white;

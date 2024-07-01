@@ -1,0 +1,23 @@
+<!-- user_profile\templates\user_profile\add_skill.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Skill</title>
+</head>
+<body>
+    <h1>Add Skill for {{ user.first_name }} {{ user.last_name }}</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="skill">Skill:</label>
+        <input type="text" id="skill" name="skill">
+        <label for="level">Level:</label>
+        <input type="text" id="level" name="level">
+        <button type="submit">Add Skill</button>
+    </form>
+</body>
+</html>
+    

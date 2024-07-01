@@ -1,0 +1,23 @@
+<!-- user_profile\templates\user_profile/update_skill.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+
+    <meta charset="UTF-8">
+    <title>Update Skill</title>
+</head>
+<body>
+    <h2>Update Skill</h2>
+    <form method="post">
+        {% csrf_token %}
+        <label for="name">Skill Name:</label>
+        <input type="text" id="name" name="name" value="{{ skill.name }}"><br><br>
+        <label for="level">Skill Level:</label>
+        <input type="text" id="level" name="level" value="{{ skill.level }}"><br><br>
+        <button type="submit">Update</button>
+        <a href="{% url 'profiles' %}">Cancel</a>
+    </form>
+</body>
+</html>

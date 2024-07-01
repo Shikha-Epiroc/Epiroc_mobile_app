@@ -1,0 +1,19 @@
+<!-- user_profile\templates\user_profile\delete_skill.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <title>Delete Skill</title>
+</head>
+<body>
+    <h2>Confirm Deletion</h2>
+    <p>Are you sure you want to delete {{ skill.name }} - {{ skill.level }}?</p>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Delete</button>
+        <a href="{% url 'profiles' %}">Cancel</a>
+    </form>
+</body>
+</html>
